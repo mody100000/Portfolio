@@ -1,0 +1,40 @@
+import { AiOutlineMail } from "react-icons/ai";
+import "./Navbar.styles.css";
+import { PiLinkedinLogoBold } from "react-icons/pi";
+import { FiGithub } from "react-icons/fi";
+import { BsInstagram } from "react-icons/bs";
+const Navbar = () => {
+  return (
+    <>
+      <div className="nav">
+        <a href="mailto:m.anamody10000@gmail.com">
+          <div className="email">
+            <div className="icon-container">
+              <AiOutlineMail className="email_logo" />
+            </div>
+            <span className="email-title">Get in touch</span>
+          </div>
+        </a>
+        <div className="items_group">
+          <a href="https://www.linkedin.com/in/mahmoud-mohamed-5a80a01b4/">
+            <span className="nav_items">Linkedin</span>
+            <PiLinkedinLogoBold size={20} className="icon" />
+          </a>
+          <span className="space">/</span>
+          <a href="https://github.com/mody100000">
+            <span className="nav_items">GitHub</span>
+            <FiGithub size={20} className="icon" />
+          </a>
+          <span className="space">/</span>
+          <a href="https://www.instagram.com/m.anamody/">
+            <span className="nav_items">Instagram </span>
+            <BsInstagram size={20} className="icon" />
+          </a>
+        </div>
+      </div>
+      <div className="nav-hr"></div>
+    </>
+  );
+};
+
+export default Navbar;

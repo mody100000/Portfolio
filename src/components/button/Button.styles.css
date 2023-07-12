@@ -1,0 +1,28 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+  color: #9a9a9a;
+  border-width: 1.3px;
+  border-color: #242424;
+  border-style: solid;
+  padding: 18px 30px 18px 30px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  border-radius: 5px;
+}
+.button-container:hover {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 700px) {
+  .button-container {
+    padding: 15px 25px 15px 25px;
+  }
+}
+.button-title {
+  display: flex;
+  align-items: center;
+  /* margin-right: 0.5rem; */
+}
