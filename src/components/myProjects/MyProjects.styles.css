@@ -1,6 +1,4 @@
 .hr {
-  /* height: 0.5px;
-    background-color: #3b3131;*/
   margin-top: 5rem;
   display: flex;
   align-items: center;
@@ -22,13 +20,15 @@
 .hr:not(:empty)::after {
   margin-left: 0.25em;
 }
+
 .main-text {
   /* font-size: 25px; */
   font-weight: 400;
   letter-spacing: 0px;
   /* line-height: 1.1rem; */
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .grid {
   display: grid;
@@ -67,6 +67,6 @@
 }
 @media screen and (max-width: 600px) {
   .main-text {
-    font-size: 16px;
+    font-size: 17px;
   }
 }

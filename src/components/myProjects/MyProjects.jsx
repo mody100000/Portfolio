@@ -54,7 +54,7 @@ const MyProjects = () => {
           {" "}
           <ProjectBox>
             <CgWebsite size={25} />
-            <h3 className="project-title">Tamlite</h3>
+            <h3 className="project-title">Template</h3>
             <p className="project-info">
               responsive and smooth template website with beautiful animations
               and Optimize images for performance.
