@@ -11,7 +11,7 @@ const Home = () => {
     <div className="container">
       <Navbar></Navbar>
       <div className="about-me-container">
-        <img className="my-photo" src={MyPhoto} alt="" />
+        <img className="my-photo" src={MyPhoto} alt="mahmoud mohamed" />
         <span className="my-name">Hi, I'm Mahmoud👋🏻</span>
         <h1 className="summery">
           MERN stack developer
