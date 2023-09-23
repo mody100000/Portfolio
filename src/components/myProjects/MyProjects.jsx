@@ -26,7 +26,7 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a href="https://github.com/mody100000/fashion-flow">
+        <a href="https://game-hup-amber.vercel.app/">
           {" "}
           <ProjectBox>
             <FaGamepad color="white" size={28} />
