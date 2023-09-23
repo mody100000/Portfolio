@@ -22,6 +22,7 @@ const Home = () => {
         </h1>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://drive.google.com/file/d/1n7eufNip6kNkcihYjQcOK-DPrm3Vh_0o/view?usp=sharing"
         >
           <Button>
