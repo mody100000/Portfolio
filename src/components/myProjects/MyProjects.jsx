@@ -14,7 +14,11 @@ const MyProjects = () => {
         <br /> and exceeds your expectations.
       </h2>
       <div className="grid">
-        <a href="https://github.com/mody100000/fashion-flow">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/mody100000/fashion-flow"
+        >
           {" "}
           <ProjectBox>
             <SiPayloadcms size={25} />
@@ -26,7 +30,11 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a href="https://game-hup-amber.vercel.app/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://game-hup-amber.vercel.app/"
+        >
           {" "}
           <ProjectBox>
             <FaGamepad color="white" size={28} />
@@ -37,7 +45,11 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a href="https://github.com/mody100000/Modyfi_front-end">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/mody100000/Modyfi_front-end"
+        >
           {" "}
           <ProjectBox>
             <AiOutlineShopping size={25} />
@@ -50,7 +62,11 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a href="https://github.com/mody100000/vidly">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/mody100000/vidly"
+        >
           {" "}
           <ProjectBox>
             <BiMoviePlay size={25} />
@@ -62,7 +78,11 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a href="https://keen-lalande-fd1f49.netlify.app/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://keen-lalande-fd1f49.netlify.app/"
+        >
           {" "}
           <ProjectBox>
             <CgWebsite size={25} />

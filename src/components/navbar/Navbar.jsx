@@ -7,7 +7,11 @@ const Navbar = () => {
   return (
     <>
       <div className="nav">
-        <a href="mailto:m.anamody10000@gmail.com">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="mailto:m.anamody10000@gmail.com"
+        >
           <div className="email">
             <div className="icon-container">
               <AiOutlineMail className="email_logo" />
@@ -16,7 +20,11 @@ const Navbar = () => {
           </div>
         </a>
         <div className="items_group">
-          <a href="https://www.linkedin.com/in/mahmoud-mohamed-5a80a01b4/">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/mahmoud-mohamed-5a80a01b4/"
+          >
             <span className="nav_items">Linkedin</span>
             <PiLinkedinLogoBold size={20} className="icon" />
           </a>
@@ -26,7 +34,11 @@ const Navbar = () => {
             <FiGithub size={20} className="icon" />
           </a>
           <span className="space">/</span>
-          <a href="https://www.instagram.com/m.anamody/">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/m.anamody/"
+          >
             <span className="nav_items">Instagram </span>
             <BsInstagram size={20} className="icon" />
           </a>

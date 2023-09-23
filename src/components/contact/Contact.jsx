@@ -10,7 +10,11 @@ const Contact = () => {
         <h1 className="contact">
           Tell me about your <br /> next project
         </h1>
-        <a href="mailto:m.anamody10000@gmail.com">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="mailto:m.anamody10000@gmail.com"
+        >
           <Button>
             Get In Touch <AiOutlineMail className="icon-m" size={15} />
           </Button>
