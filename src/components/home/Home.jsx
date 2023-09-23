@@ -20,7 +20,7 @@ const Home = () => {
           <br />
           Strong team player.
         </h1>
-        <a href="https://drive.google.com/file/d/1mHHl6SpNKKArMWtY0ChISknVa5lTVtdy/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1n7eufNip6kNkcihYjQcOK-DPrm3Vh_0o/view?usp=sharing">
           <Button>
             Check Out My CV <RxResume size="15" />
           </Button>
