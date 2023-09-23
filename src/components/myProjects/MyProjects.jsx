@@ -4,6 +4,7 @@ import { SiPayloadcms } from "react-icons/si";
 import { AiOutlineShopping } from "react-icons/ai";
 import { BiMoviePlay } from "react-icons/bi";
 import { CgWebsite } from "react-icons/cg";
+import { FaGamepad } from "react-icons/fa";
 const MyProjects = () => {
   return (
     <div>
@@ -21,6 +22,17 @@ const MyProjects = () => {
             <p className="project-info">
               content management system for managing and storing clothing store
               data in an efficient way
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
+        <a href="https://github.com/mody100000/fashion-flow">
+          {" "}
+          <ProjectBox>
+            <FaGamepad color="white" size={28} />
+            <h3 className="project-title">Video Game</h3>
+            <p className="project-info">
+              responsive video game discovery app built by fetching the RAWG API
             </p>
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
