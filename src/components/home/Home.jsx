@@ -1,5 +1,5 @@
 import "./Home.styles.css";
-import MyPhoto from "../../assets/portfolio.jpg";
+import MyPhoto from "../../assets/Mahmoud.jpg";
 import { RxResume } from "react-icons/rx";
 import Button from "./../button/Button";
 import Navbar from "./../navbar/Navbar";
