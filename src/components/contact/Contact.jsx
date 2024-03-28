@@ -13,7 +13,7 @@ const Contact = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="mailto:m.anamody10000@gmail.com"
+          href="mailto:mahmoud.m.gomaaa.dev@gmail.com"
         >
           <Button>
             Get In Touch <AiOutlineMail className="icon-m" size={15} />

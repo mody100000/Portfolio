@@ -2,6 +2,7 @@ import ProjectBox from "../projectBox/ProjectBox";
 import "./MyProjects.styles.css";
 import { SiPayloadcms } from "react-icons/si";
 import { AiOutlineShopping } from "react-icons/ai";
+import { PiBarbell } from "react-icons/pi";
 import { BiMoviePlay } from "react-icons/bi";
 import { CgWebsite } from "react-icons/cg";
 import { FaGamepad } from "react-icons/fa";
@@ -14,6 +15,24 @@ const MyProjects = () => {
         <br /> and exceeds your expectations.
       </h2>
       <div className="grid">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/AliElgohary/Elgymwaya"
+        >
+          {" "}
+          <ProjectBox>
+            <PiBarbell size={28} />
+            <h3 className="project-title">GYM web app</h3>
+            <p className="project-info">
+              Real world gym web application using the MEARN stack, Key features
+              includes: Trainer Assignment ,Client Management,Custom Workouts
+              Routines, Providing Feedback, Reservation Section, Subscription
+              Plans Selection.
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
         <a
           target="_blank"
           rel="noreferrer"

@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className="footer-hr"></div>
       <div className="footer">
-        <span className="cobyright">© 2023 All rights reserved.</span>
+        <span className="cobyright">© 2024 All rights reserved.</span>
         <div className="items_group">
           <a
             target="_blank"

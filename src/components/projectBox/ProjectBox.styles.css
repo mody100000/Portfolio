@@ -10,7 +10,11 @@
   margin-top: 1.5rem;
   cursor: pointer;
   height: 18rem;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  z-index: 1;
 }
 .icons {
   display: flex;
@@ -27,6 +31,6 @@
 .box-content {
   transition: transform 0.5s;
 }
-.box-content:hover {
-  transform: scale(0.9);
+.box-container:hover {
+  transform: scale(1.05);
 }

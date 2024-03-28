@@ -23,7 +23,7 @@ const Home = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://drive.google.com/file/d/1n7eufNip6kNkcihYjQcOK-DPrm3Vh_0o/view?usp=sharing"
+          href="https://drive.google.com/file/d/1GGIQGy7QmvGVOg2p3EWwk0jnEhjMQ5IA/view?usp=sharing"
         >
           <Button>
             Check Out My CV <RxResume size="15" />

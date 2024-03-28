@@ -9,11 +9,15 @@
   border-style: solid;
   padding: 23px 35px 23px 35px;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 1;
   border-radius: 5px;
 }
 .button-container:hover {
-  transform: scale(0.9);
+  transform: scale(1.14);
 }
 
 @media screen and (max-width: 700px) {
