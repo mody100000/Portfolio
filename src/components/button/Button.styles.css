@@ -17,7 +17,7 @@
   border-radius: 5px;
 }
 .button-container:hover {
-  transform: scale(1.14);
+  transform: scale(1.11);
 }
 
 @media screen and (max-width: 700px) {
