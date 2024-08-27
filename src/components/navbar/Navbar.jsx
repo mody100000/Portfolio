@@ -10,8 +10,7 @@ const Navbar = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="mailto:m.anamody10000@gmail.com"
-        >
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoud.m.gomaaa.dev@gmail.com">
           <div className="email">
             <div className="icon-container">
               <AiOutlineMail className="email_logo" />
