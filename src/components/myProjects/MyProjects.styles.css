@@ -52,7 +52,11 @@
   color: #898888;
   font-size: 11px;
 }
-
+.xLogo {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
 @media screen and (max-width: 900px) {
   .grid {
     grid-template-rows: repeat(2, 1fr);

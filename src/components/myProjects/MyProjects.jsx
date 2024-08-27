@@ -4,8 +4,8 @@ import { SiPayloadcms } from "react-icons/si";
 import { AiOutlineShopping } from "react-icons/ai";
 import { PiBarbell } from "react-icons/pi";
 import { BiMoviePlay } from "react-icons/bi";
-import { CgWebsite } from "react-icons/cg";
 import { FaGamepad } from "react-icons/fa";
+import xLogo from "../../assets/logoLightMode.webp"
 const MyProjects = () => {
   return (
     <div>
@@ -15,6 +15,21 @@ const MyProjects = () => {
         <br /> and exceeds your expectations.
       </h2>
       <div className="grid">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://nadinetourjman.com/"
+        >
+          {" "}
+          <ProjectBox>
+            <img src={xLogo} alt="xLogo" className="xLogo" />
+            <h3 className="project-title xTitle">Xfactor</h3>
+            <p className="project-info">
+              web platform simplifies the process of reserving coaching sessions between clients and trainers. Whether you're searching for a fitness coach, personal trainer, or any other expert, the platform connects you with professionals who perfectly match your needs.
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
         <a
           target="_blank"
           rel="noreferrer"
@@ -97,22 +112,7 @@ const MyProjects = () => {
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
         </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://keen-lalande-fd1f49.netlify.app/"
-        >
-          {" "}
-          <ProjectBox>
-            <CgWebsite size={25} />
-            <h3 className="project-title">Template</h3>
-            <p className="project-info">
-              responsive and smooth template website with beautiful animations
-              and Optimize images for performance.
-            </p>
-            {/* <span className="project-tec">React / Node.js</span> */}
-          </ProjectBox>
-        </a>
+
       </div>
     </div>
   );
