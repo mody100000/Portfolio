@@ -6,6 +6,9 @@ import { PiBarbell } from "react-icons/pi";
 import { BiMoviePlay } from "react-icons/bi";
 import { FaGamepad } from "react-icons/fa";
 import xLogo from "../../assets/logoLightMode.webp"
+import EXO from "../../assets/EXO-plore.ico"
+import GenoaMatroh from "../../assets/GenoaMatroh.png"
+
 const MyProjects = () => {
   return (
     <div>
@@ -18,7 +21,7 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://nadinetourjman.com/"
+          href="https://uze.usd.mybluehost.me/"
         >
           {" "}
           <ProjectBox>
@@ -51,6 +54,21 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
+          href="https://github.com/mody100000/Exo-plore"
+        >
+          {" "}
+          <ProjectBox>
+            <img src={EXO} alt="Exo-plore" className="xLogo" />
+            <h3 className="project-title">Exo-plore</h3>
+            <p className="project-info">
+              interactive web application blends advanced 3D rendering and AI-driven conversational capabilities to create an interactive and educational platform focused on exoplanets. This innovative app allows users to explore information about exoplanets through a virtual telescope and engage in dynamic Q&A sessions
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
           href="https://github.com/mody100000/fashion-flow"
         >
           {" "}
@@ -60,6 +78,21 @@ const MyProjects = () => {
             <p className="project-info">
               content management system for managing and storing clothing store
               data in an efficient way
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://uze.usd.mybluehost.me/genoamatroh"
+        >
+          {" "}
+          <ProjectBox>
+            <img src={GenoaMatroh} alt="GenoaMatroh" className="xLogo" />
+            <h3 className="project-title">Genoa Matroh</h3>
+            <p className="project-info">
+              dynamic and interactive website for Genoa Matroh, a picturesque tourist village in Egypt. The website allows users to explore the village's offerings, including its beautiful accommodations and activities, while providing the convenience of reserving tickets or purchasing property directly online.
             </p>
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
