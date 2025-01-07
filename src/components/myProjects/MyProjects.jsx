@@ -7,7 +7,9 @@ import { BiMoviePlay } from "react-icons/bi";
 import { FaGamepad } from "react-icons/fa";
 import xLogo from "../../assets/logoLightMode.webp"
 import EXO from "../../assets/EXO-plore.ico"
+import lameraLogo from "../../assets/logo.webp"
 import GenoaMatroh from "../../assets/GenoaMatroh.png"
+import { IoBookOutline } from "react-icons/io5";
 
 const MyProjects = () => {
   return (
@@ -85,6 +87,20 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
+          href="https://github.com/mody100000/lamera-flip-menu"
+        >
+          {" "}
+          <ProjectBox>
+            <IoBookOutline size={25} />
+            <h3 className="project-title">Flip-Book Restaurant Menu App</h3>
+            <p className="project-info">
+              innovative React application using the react-pageflip library to create a realistic flip-book menu experience. Menu images are rendered as pages, and Google Cloud Vision AI powers OCR text detection on each page. Users can interact with the menu by clicking on detected text items to place orders. This app leverages AI technology and a visually engaging design to enhance the dining experience.
+            </p>
+          </ProjectBox>
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
           href="https://uze.usd.mybluehost.me/genoamatroh"
         >
           {" "}
@@ -125,6 +141,21 @@ const MyProjects = () => {
               full-stack web application <br /> for a scalable and responsive{" "}
               <br />
               e-commerce platform
+            </p>
+            {/* <span className="project-tec">React / Node.js</span> */}
+          </ProjectBox>
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/mody100000/menu-app"
+        >
+          {" "}
+          <ProjectBox>
+            <img src={lameraLogo} alt="lameraLogo" className="xLogo" />
+            <h3 className="project-title">Restaurant Web App</h3>
+            <p className="project-info">
+              React application with Tailwind CSS, offering a modern and feature-rich design. It combines a sleek interface with intuitive functionality, making it ideal for enhancing the dining experience.
             </p>
             {/* <span className="project-tec">React / Node.js</span> */}
           </ProjectBox>
