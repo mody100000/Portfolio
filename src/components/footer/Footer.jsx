@@ -3,11 +3,12 @@ import { PiLinkedinLogoBold } from "react-icons/pi";
 import { FiGithub } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <>
       <div className="footer-hr"></div>
       <div className="footer">
-        <span className="cobyright">© 2024 All rights reserved.</span>
+        <span className="cobyright">© {year} All rights reserved.</span>
         <div className="items_group">
           <a
             target="_blank"
