@@ -31,7 +31,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.instagram.com/m.anamody/"
+            href="https://www.instagram.com/mody_dev/"
           >
             <span className="footer_items">Instagram </span>
             <BsInstagram size={20} className="icon" />
