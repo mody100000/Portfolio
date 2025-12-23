@@ -23,7 +23,7 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://uze.usd.mybluehost.me/"
+          href="https://xfactor-ecru.vercel.app/"
         >
           {" "}
           <ProjectBox>
@@ -87,7 +87,7 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/mody100000/lamera-flip-menu"
+          href="https://lamera-flip-menu.vercel.app/"
         >
           {" "}
           <ProjectBox>
@@ -101,7 +101,7 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://uze.usd.mybluehost.me/genoamatroh"
+          href="https://genoa-matroh.vercel.app/"
         >
           {" "}
           <ProjectBox>
@@ -148,7 +148,7 @@ const MyProjects = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/mody100000/menu-app"
+          href="https://menu-app-blond-six.vercel.app/"
         >
           {" "}
           <ProjectBox>
