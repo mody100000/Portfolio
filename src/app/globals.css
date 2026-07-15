@@ -6,7 +6,8 @@
   /* Colors */
   --color-bg: #0e1116; /* deep near-black midnight */
   --color-surface: #141820;
-  --color-text: #f8f9fa;
+  --color-primary: #ededed;
+  --color-text: var(--color-primary);
   --color-text-muted: #adadad;
   --color-accent: #19f9d8; /* vibrant cyan/teal */
   --color-accent-glow: rgba(25, 249, 216, 0.35);
@@ -25,6 +26,7 @@
   /* Colors mapping */
   --color-bg: var(--color-bg);
   --color-surface: var(--color-surface);
+  --color-primary: var(--color-primary);
   --color-text: var(--color-text);
   --color-text-muted: var(--color-text-muted);
   --color-accent: var(--color-accent);
