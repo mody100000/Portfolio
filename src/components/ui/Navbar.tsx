@@ -90,6 +90,16 @@ const socialLinks = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -105,7 +115,13 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-xs shadow-nav transition-all duration-300">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+          isScrolled
+            ? "bg-nav-bg backdrop-blur-xs shadow-nav"
+            : "bg-transparent backdrop-blur-none shadow-none"
+        }`}
+      >
         <nav className="w-full px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
           {/* Left Side: Logo */}
           <div className="flex items-center">
@@ -120,7 +136,7 @@ export default function Navbar() {
               className="relative w-14 md:w-16 h-16 rounded-full overflow-hidden border border-[#ededed]/20 hover:border-accent hover:scale-105 transition-all duration-300 group shadow-md"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/image.svg"
                 alt="Logo"
                 fill
                 className="object-cover group-hover:rotate-6 transition-transform duration-300"
