@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-full flex flex-col">
         <StarBackground />
-        <div className="mb-16">
+        <div className="mb-4">
           <Navbar />
         </div>
         {children}
