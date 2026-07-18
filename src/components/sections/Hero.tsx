@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Button from "../ui/Button";
+import { EyeIcon } from "../ui/Icons";
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
         <span className="text-accent font-bold">Software Engineer</span> focused
         on <span className="text-accent font-bold">Frontend Development</span>,
         building fast, accessible, and scalable web applications with React,
-        Next.js, and TypeScript.
+        next.js, and TypeScript.
       </p>
 
       {/* Circular profile image container with glowing white moon shadow */}
@@ -36,10 +37,21 @@ export default function Hero() {
 
       {/* Action Buttons: Stack vertically on mobile, side-by-side on larger screens - lowercase */}
       <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center">
-        <Button href="/resume.pdf" variant="filled" className="w-50 py-3.5">
-          download cv
+        <Button
+          href="/Mahmoud-Mohamed-Gomaa-Software Engineer.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outline-accent"
+          className="w-50 py-3.5 gap-2"
+        >
+          <EyeIcon className="w-4 h-4 " />
+          View CV
         </Button>
-        <Button href="#projects" variant="outline" className="w-50 py-3.5">
+        <Button
+          href="#projects"
+          variant="minimal-white"
+          className="w-50 py-3.5"
+        >
           view projects
         </Button>
       </div>
