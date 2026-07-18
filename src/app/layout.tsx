@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import StarBackground from "@/components/ui/StarBackground";
-import Navbar from "@/components/ui/Navbar";
+import StarBackground from "@/components/common/StarBackground";
+import Navbar from "@/components/common/Navbar";
 
 export const metadata: Metadata = {
   title: "Mahmoud Gomaa | Portfolio",
