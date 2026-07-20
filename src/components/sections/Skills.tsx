@@ -229,7 +229,7 @@ export default function Skills() {
       className="py-20 md:py-28 px-6 md:px-12 mx-auto scroll-mt-24"
     >
       {/* Section Header using Reusable Component */}
-      <div className="px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="px-0 lg:px-12 max-w-7xl mx-auto">
         <SectionHeader number="02" title="Skills" />
       </div>
 
