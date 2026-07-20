@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Button from "../ui/Button";
-import { EyeIcon } from "../ui/Icons";
+import { EyeIcon } from "../ui/icons/Icons";
 
 export default function Hero() {
   return (

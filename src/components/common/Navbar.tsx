@@ -8,10 +8,11 @@ import {
   LinkedinIcon,
   InstagramIcon,
   GmailIcon,
-} from "@/components/ui/Icons";
+} from "@/components/ui/icons/Icons";
 
 const navLinks = [
   { name: "about", href: "#about" },
+  { name: "skills", href: "#skills" },
   { name: "experience", href: "#experience" },
   { name: "projects", href: "#projects" },
   { name: "contact", href: "#contact" },
