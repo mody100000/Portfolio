@@ -1,5 +1,3 @@
-import React from "react";
-
 interface IconProps {
   className?: string;
 }
@@ -116,4 +114,3 @@ export function CloseIcon({ className = "w-5 h-5" }: IconProps) {
     </svg>
   );
 }
-
