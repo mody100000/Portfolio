@@ -21,6 +21,14 @@ import {
   DockerIcon,
   LinuxIcon,
   ArchLinuxIcon,
+  GitHubIcon,
+  FirebaseIcon,
+  AzureIcon,
+  PrismaIcon,
+  NestJSIcon,
+  ThreejsIcon,
+  VercelIcon,
+  AWSIcon,
 } from "@/components/ui/icons/SkillIcons";
 
 interface Skill {
@@ -83,6 +91,12 @@ export default function Skills() {
       icon: <NextjsIcon />,
     },
     {
+      name: "Three.js",
+      category: "frontend",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <ThreejsIcon />,
+    },
+    {
       name: "Redux",
       category: "frontend",
       color: "rgba(118, 74, 188, 0.4)",
@@ -115,6 +129,12 @@ export default function Skills() {
       icon: <ExpressIcon />,
     },
     {
+      name: "NestJS",
+      category: "backend",
+      color: "rgba(224, 35, 78, 0.4)",
+      icon: <NestJSIcon />,
+    },
+    {
       name: "RESTful APIs",
       category: "backend",
       color: "rgba(0, 150, 136, 0.4)",
@@ -132,6 +152,18 @@ export default function Skills() {
       color: "rgba(71, 162, 72, 0.4)",
       icon: <MongoDBIcon />,
     },
+    {
+      name: "Prisma",
+      category: "backend",
+      color: "rgba(45, 212, 191, 0.4)",
+      icon: <PrismaIcon />,
+    },
+    {
+      name: "Firebase",
+      category: "backend",
+      color: "rgba(255, 202, 40, 0.4)",
+      icon: <FirebaseIcon />,
+    },
 
     // Tools & DevOps
     {
@@ -141,10 +173,34 @@ export default function Skills() {
       icon: <GitIcon />,
     },
     {
+      name: "GitHub",
+      category: "tools",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <GitHubIcon />,
+    },
+    {
       name: "Docker",
       category: "tools",
       color: "rgba(36, 150, 237, 0.4)",
       icon: <DockerIcon />,
+    },
+    {
+      name: "Azure",
+      category: "tools",
+      color: "rgba(0, 120, 212, 0.4)",
+      icon: <AzureIcon />,
+    },
+    {
+      name: "AWS",
+      category: "tools",
+      color: "rgba(255, 153, 0, 0.4)",
+      icon: <AWSIcon />,
+    },
+    {
+      name: "Vercel",
+      category: "tools",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <VercelIcon />,
     },
     {
       name: "Linux",
@@ -170,10 +226,12 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto scroll-mt-24"
+      className="py-20 md:py-28 px-6 md:px-12 mx-auto scroll-mt-24"
     >
       {/* Section Header using Reusable Component */}
-      <SectionHeader number="02" title="Skills" />
+      <div className="px-6 md:px-12 max-w-7xl mx-auto">
+        <SectionHeader number="02" title="Skills" />
+      </div>
 
       {/* Tabs Filter */}
       <div className="flex flex-wrap justify-center gap-3 mb-16 select-none">
@@ -195,11 +253,11 @@ export default function Skills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-6">
         {filteredSkills.map((skill, index) => (
           <div
             key={`${skill.name}-${index}`}
-            className={`group relative bg-surface/40 hover:bg-surface/75 border rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden select-none ${
+            className={`group relative bg-surface/40 hover:bg-surface/75 border rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden select-none cursor-pointer ${
               skill.featured
                 ? "border-[#1793D1]/50 shadow-[0_0_20px_rgba(23,147,209,0.2)] bg-surface/60 hover:border-[#1793D1]"
                 : "border-[#ededed]/10 hover:border-accent/40"
