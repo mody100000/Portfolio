@@ -8,9 +8,7 @@ export default function Home() {
     <main className="grow flex flex-col items-center justify-center w-full">
       <div className="w-full my-9">
         <Hero />
-        <SectionDivider />
         <About />
-        <SectionDivider />
         <Skills />
       </div>
     </main>

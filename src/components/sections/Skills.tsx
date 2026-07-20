@@ -20,6 +20,15 @@ import {
   GitIcon,
   DockerIcon,
   LinuxIcon,
+  ArchLinuxIcon,
+  GitHubIcon,
+  FirebaseIcon,
+  AzureIcon,
+  PrismaIcon,
+  NestJSIcon,
+  ThreejsIcon,
+  VercelIcon,
+  AWSIcon,
 } from "@/components/ui/icons/SkillIcons";
 
 interface Skill {
@@ -27,16 +36,20 @@ interface Skill {
   category: "frontend" | "backend" | "tools";
   color: string; // Brand color for hover effects (hex or rgb)
   icon: React.ReactNode;
+  badge?: string;
+  featured?: boolean;
 }
 
 export default function Skills() {
-  const [activeTab, setActiveTab] = useState<"all" | "frontend" | "backend" | "tools">("all");
+  const [activeTab, setActiveTab] = useState<
+    "all" | "frontend" | "backend" | "tools"
+  >("all");
 
   const categories = [
-    { id: "all", name: "all skills" },
+    { id: "all", name: "all" },
     { id: "frontend", name: "frontend" },
-    { id: "backend", name: "backend & db" },
-    { id: "tools", name: "tools & devops" },
+    { id: "backend", name: "backend" },
+    { id: "tools", name: "tools" },
   ] as const;
 
   const skillsList: Skill[] = [
@@ -78,6 +91,12 @@ export default function Skills() {
       icon: <NextjsIcon />,
     },
     {
+      name: "Three.js",
+      category: "frontend",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <ThreejsIcon />,
+    },
+    {
       name: "Redux",
       category: "frontend",
       color: "rgba(118, 74, 188, 0.4)",
@@ -110,6 +129,12 @@ export default function Skills() {
       icon: <ExpressIcon />,
     },
     {
+      name: "NestJS",
+      category: "backend",
+      color: "rgba(224, 35, 78, 0.4)",
+      icon: <NestJSIcon />,
+    },
+    {
       name: "RESTful APIs",
       category: "backend",
       color: "rgba(0, 150, 136, 0.4)",
@@ -127,6 +152,18 @@ export default function Skills() {
       color: "rgba(71, 162, 72, 0.4)",
       icon: <MongoDBIcon />,
     },
+    {
+      name: "Prisma",
+      category: "backend",
+      color: "rgba(45, 212, 191, 0.4)",
+      icon: <PrismaIcon />,
+    },
+    {
+      name: "Firebase",
+      category: "backend",
+      color: "rgba(255, 202, 40, 0.4)",
+      icon: <FirebaseIcon />,
+    },
 
     // Tools & DevOps
     {
@@ -136,10 +173,34 @@ export default function Skills() {
       icon: <GitIcon />,
     },
     {
+      name: "GitHub",
+      category: "tools",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <GitHubIcon />,
+    },
+    {
       name: "Docker",
       category: "tools",
       color: "rgba(36, 150, 237, 0.4)",
       icon: <DockerIcon />,
+    },
+    {
+      name: "Azure",
+      category: "tools",
+      color: "rgba(0, 120, 212, 0.4)",
+      icon: <AzureIcon />,
+    },
+    {
+      name: "AWS",
+      category: "tools",
+      color: "rgba(255, 153, 0, 0.4)",
+      icon: <AWSIcon />,
+    },
+    {
+      name: "Vercel",
+      category: "tools",
+      color: "rgba(255, 255, 255, 0.3)",
+      icon: <VercelIcon />,
     },
     {
       name: "Linux",
@@ -147,19 +208,30 @@ export default function Skills() {
       color: "rgba(252, 198, 36, 0.3)",
       icon: <LinuxIcon />,
     },
+    {
+      name: "ARCH",
+      category: "tools",
+      color: "rgba(23, 147, 209, 0.7)",
+      icon: <ArchLinuxIcon />,
+      badge: "btw",
+      featured: true,
+    },
   ];
 
-  const filteredSkills = activeTab === "all"
-    ? skillsList
-    : skillsList.filter((skill) => skill.category === activeTab);
+  const filteredSkills =
+    activeTab === "all"
+      ? skillsList
+      : skillsList.filter((skill) => skill.category === activeTab);
 
   return (
     <section
       id="skills"
-      className="py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto scroll-mt-24"
+      className="py-20 md:py-28 px-6 md:px-12 mx-auto scroll-mt-24"
     >
       {/* Section Header using Reusable Component */}
-      <SectionHeader number="02" title="Skills & Technologies" />
+      <div className="px-0 lg:px-12 max-w-7xl mx-auto">
+        <SectionHeader number="02" title="Skills" />
+      </div>
 
       {/* Tabs Filter */}
       <div className="flex flex-wrap justify-center gap-3 mb-16 select-none">
@@ -168,7 +240,7 @@ export default function Skills() {
             <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
-              className={`px-6 py-2.5 rounded-full font-mono text-sm tracking-wider uppercase transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full font-mono text-sm tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                 activeTab === category.id
                   ? "bg-accent text-bg font-semibold shadow-md shadow-accent/20 scale-[1.02]"
                   : "text-zinc-400 hover:text-white"
@@ -181,32 +253,59 @@ export default function Skills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-6">
         {filteredSkills.map((skill, index) => (
           <div
             key={`${skill.name}-${index}`}
-            className="group relative bg-surface/40 hover:bg-surface/75 border border-[#ededed]/10 hover:border-accent/40 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden select-none"
+            className={`group relative bg-surface/40 hover:bg-surface/75 border rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden select-none cursor-pointer ${
+              skill.featured
+                ? "border-[#1793D1]/50 shadow-[0_0_20px_rgba(23,147,209,0.2)] bg-surface/60 hover:border-[#1793D1]"
+                : "border-[#ededed]/10 hover:border-accent/40"
+            }`}
             style={
               {
                 "--brand-glow": skill.color,
               } as React.CSSProperties
             }
           >
-            {/* Soft Ambient Radial brand Glow on Hover */}
+            {/* Optional Badge (e.g. "i use arch btw") */}
+            {skill.badge && (
+              <span className="absolute top-2 right-2 px-2 py-0.5 text-[9px] sm:text-[10px] font-mono font-bold text-[#1793D1] bg-[#1793D1]/15 border border-[#1793D1]/40 rounded-full shadow-[0_0_10px_rgba(23,147,209,0.3)] backdrop-blur-md animate-pulse tracking-tight">
+                {skill.badge}
+              </span>
+            )}
+
+            {/* Soft Ambient Radial brand Glow on Hover & Resting for featured */}
             <div
-              className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10"
+              className={`absolute -inset-px rounded-2xl transition-opacity duration-500 pointer-events-none -z-10 ${
+                skill.featured
+                  ? "opacity-60 group-hover:opacity-100"
+                  : "opacity-0 group-hover:opacity-100"
+              }`}
               style={{
-                background: `radial-gradient(100px circle at center, ${skill.color}, transparent 80%)`,
+                background: `radial-gradient(120px circle at center, ${skill.color}, transparent 80%)`,
               }}
             />
 
             {/* Skill Icon container */}
-            <div className="w-16 h-16 flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-110 group-hover:filter group-hover:drop-shadow-[0_0_12px_var(--brand-glow)]">
+            <div
+              className={`w-16 h-16 flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-110 ${
+                skill.featured
+                  ? "filter drop-shadow-[0_0_12px_rgba(23,147,209,0.7)] group-hover:drop-shadow-[0_0_18px_rgba(23,147,209,0.9)]"
+                  : "group-hover:filter group-hover:drop-shadow-[0_0_12px_var(--brand-glow)]"
+              }`}
+            >
               {skill.icon}
             </div>
 
             {/* Skill Name */}
-            <span className="font-body text-base font-medium text-zinc-400 group-hover:text-white transition-colors duration-300 text-center">
+            <span
+              className={`font-body text-base font-medium transition-colors duration-300 text-center ${
+                skill.featured
+                  ? "text-white font-semibold"
+                  : "text-zinc-400 group-hover:text-white"
+              }`}
+            >
               {skill.name}
             </span>
           </div>
