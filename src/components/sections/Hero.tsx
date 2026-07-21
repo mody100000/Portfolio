@@ -47,13 +47,13 @@ export default function Hero() {
           <EyeIcon className="w-4 h-4 " />
           View CV
         </Button>
-        <Button
+        {/* <Button
           href="#projects"
           variant="minimal-white"
           className="w-50 py-3.5"
         >
           view projects
-        </Button>
+        </Button> */}
       </div>
     </section>
   );
