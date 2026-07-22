@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
+import GithubContributions from "@/components/sections/GithubContributions";
 import SectionDivider from "@/components/ui/SectionDivider";
 
 export default function Home() {
@@ -10,7 +11,9 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <GithubContributions />
       </div>
     </main>
   );
 }
+

@@ -13,6 +13,7 @@ import {
 const navLinks = [
   { name: "about", href: "#about" },
   { name: "skills", href: "#skills" },
+  { name: "contributions", href: "#contributions" },
   // { name: "experience", href: "#experience" },
   // { name: "projects", href: "#projects" },
   // { name: "contact", href: "#contact" },
