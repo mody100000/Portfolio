@@ -12,11 +12,9 @@ import {
 
 const navLinks = [
   { name: "about", href: "#about" },
+  { name: "experience", href: "#experience" },
   { name: "skills", href: "#skills" },
   { name: "contributions", href: "#contributions" },
-  // { name: "experience", href: "#experience" },
-  // { name: "projects", href: "#projects" },
-  // { name: "contact", href: "#contact" },
 ];
 
 const socialLinks = [
