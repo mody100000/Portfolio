@@ -50,9 +50,9 @@ export default function Experience() {
       role: "Full-Stack Developer",
       employmentType: "Contract-Based",
       location: "Saudi Arabia (Riyadh) / Remote",
-      dates: "Jul 2025 – Dec 2025",
-      duration: "6 mos",
-      logo: "/images/experience/FCS.png",
+      dates: "Jun 2026 – Present",
+      duration: "3 mos",
+      logo: "/images/experience/FCS.jpeg",
       companyDescription:
         "FCS is a Saudi company specializing in workspace solutions, educational furniture, and commercial interior fit-out projects.",
       bullets: [
