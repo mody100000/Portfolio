@@ -40,7 +40,7 @@ export default function GithubContributions({
       className={`py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto scroll-mt-24 ${className}`}
     >
       {/* Section Header */}
-      <SectionHeader number="03" title="GitHub Contributions" />
+      <SectionHeader number="04" title="GitHub Contributions" />
 
       {/* Subtitle / Description */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 -mt-6">

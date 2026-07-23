@@ -231,7 +231,7 @@ export default function Skills() {
     >
       {/* Section Header using Reusable Component */}
       <div className="px-0 lg:px-12 max-w-7xl mx-auto">
-        <SectionHeader number="02" title="Skills" />
+        <SectionHeader number="03" title="Skills" />
       </div>
 
       {/* Animated Category Tabs Filter */}

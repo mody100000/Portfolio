@@ -1,8 +1,8 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
 import Skills from "@/components/sections/Skills";
 import GithubContributions from "@/components/sections/GithubContributions";
-import SectionDivider from "@/components/ui/SectionDivider";
 
 export default function Home() {
   return (
@@ -10,10 +10,10 @@ export default function Home() {
       <div className="w-full my-9">
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <GithubContributions />
       </div>
     </main>
   );
 }
-
