@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Action Buttons: Stack vertically on mobile, side-by-side on larger screens - lowercase */}
       <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center">
         <Button
-          href="/Mahmoud-Mohamed-Gomaa-Software Engineer.pdf"
+          href="/Mahmoud Mohamed Gomaa Software Engineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
           variant="outline-accent"
@@ -48,11 +48,11 @@ export default function Hero() {
           View CV
         </Button>
         {/* <Button
-          href="#projects"
+          href="#experience"
           variant="minimal-white"
           className="w-50 py-3.5"
         >
-          view projects
+          View Experience
         </Button> */}
       </div>
     </section>
