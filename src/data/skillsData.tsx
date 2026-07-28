@@ -26,6 +26,8 @@ import {
   ThreejsIcon,
   VercelIcon,
   AWSIcon,
+  AgileIcon,
+  FigmaIcon,
 } from "@/components/ui/icons/SkillIcons";
 
 export interface Skill {
@@ -161,6 +163,18 @@ export const skillsList: Skill[] = [
     category: "tools",
     color: "rgba(36, 150, 237, 0.4)",
     icon: <DockerIcon />,
+  },
+  {
+    name: "Agile",
+    category: "tools",
+    color: "rgba(255, 100, 26, 0.4)",
+    icon: <AgileIcon />,
+  },
+  {
+    name: "Figma",
+    category: "tools",
+    color: "rgba(242, 78, 30, 0.4)",
+    icon: <FigmaIcon />,
   },
   {
     name: "Azure",
