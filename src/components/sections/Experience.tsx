@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { experiences } from "@/data/experienceData";
 import { experienceSkillsIcons } from "@/data/experienceSkillsData";
+import { LinkedinIcon, ExternalLinkIcon } from "@/components/ui/icons/Icons";
 
 function getSkillIcon(skillName: string): React.ReactNode | null {
   return experienceSkillsIcons[skillName] || null;
@@ -53,10 +54,38 @@ export default function Experience() {
                   {/* Header details */}
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
                     <div>
-                      {/* Job Title */}
-                      <h3 className="text-xl md:text-2xl font-bold font-display text-white group-hover:text-accent transition-colors duration-300">
-                        {exp.role}
-                      </h3>
+                      {/* Job Title & Links */}
+                      <div className="flex flex-wrap items-center gap-3">
+                        <h3 className="text-xl md:text-2xl font-bold font-display text-white group-hover:text-accent transition-colors duration-300">
+                          {exp.role}
+                        </h3>
+                        {exp.links && (
+                          <div className="flex items-center gap-2">
+                            {exp.links.linkedin && (
+                              <a
+                                href={exp.links.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-1.5 hover:text-accent text-white bg-blue-500 hover:bg-zinc-900/90 border border-zinc-800 hover:border-accent/40 rounded-lg transition-all duration-300 hover:scale-110 flex items-center justify-center shadow-md hover:shadow-[0_0_15px_rgba(25,249,216,0.15)] group/link"
+                                title="LinkedIn Page"
+                              >
+                                <LinkedinIcon className="w-4 h-4" />
+                              </a>
+                            )}
+                            {exp.links.production && (
+                              <a
+                                href={exp.links.production}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-1.5 text-white hover:text-accent bg-blue-600 hover:bg-zinc-900/90 border border-zinc-800 hover:border-accent/40 rounded-lg transition-all duration-300 hover:scale-110 flex items-center justify-center shadow-md hover:shadow-[0_0_15px_rgba(25,249,216,0.15)] group/link"
+                                title="Live Website"
+                              >
+                                <ExternalLinkIcon className="w-4.5 h-4.5" />
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </div>
                       {/* Company Name & Employment Type */}
                       <div className="text-base md:text-lg font-body text-zinc-300 font-semibold mt-1">
                         {exp.company}
@@ -159,7 +188,11 @@ export default function Experience() {
                           key={skill}
                           className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono text-zinc-400 bg-zinc-900/40 border border-zinc-800/60 rounded-full hover:border-accent/40 hover:text-accent transition-all duration-200 select-none"
                         >
-                          {icon && <span className="flex items-center justify-center shrink-0">{icon}</span>}
+                          {icon && (
+                            <span className="flex items-center justify-center shrink-0">
+                              {icon}
+                            </span>
+                          )}
                           <span>{skill}</span>
                         </span>
                       );

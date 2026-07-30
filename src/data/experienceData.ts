@@ -9,6 +9,10 @@ export interface ExperienceItem {
   companyDescription?: string;
   bullets: string[];
   skills: string[];
+  links?: {
+    production?: string;
+    linkedin?: string;
+  };
 }
 
 export const experiences: ExperienceItem[] = [
@@ -39,6 +43,9 @@ export const experiences: ExperienceItem[] = [
       "Docker",
       "Agile",
     ],
+    links: {
+      linkedin: "https://www.linkedin.com/company/launch-workz/",
+    },
   },
   {
     company: "Future Comprehensive Solutions (FCS)",
@@ -68,6 +75,10 @@ export const experiences: ExperienceItem[] = [
       "Docker",
       "Nginx",
     ],
+    links: {
+      production: "https://www.fcsco.sa/",
+      linkedin: "https://www.linkedin.com/company/fcsco/",
+    },
   },
   {
     company: "NUMU",
@@ -119,5 +130,8 @@ export const experiences: ExperienceItem[] = [
       "Redux",
       "Figma",
     ],
+    links: {
+      linkedin: "https://www.linkedin.com/company/galaxy-spies/",
+    },
   },
 ];
