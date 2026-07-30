@@ -12,10 +12,8 @@ import {
 
 const navLinks = [
   { name: "about", href: "#about" },
-  { name: "experience", href: "#experience" },
-  { name: "internships", href: "#internships" },
-  { name: "education", href: "#education" },
   { name: "skills", href: "#skills" },
+  { name: "experience", href: "#experience" },
   { name: "contributions", href: "#contributions" },
 ];
 

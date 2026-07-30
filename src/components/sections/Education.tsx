@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import SectionHeader from "@/components/ui/SectionHeader";
+import TimelineSubHeader from "@/components/ui/TimelineSubHeader";
 import { education, EducationItem } from "@/data/educationData";
 import { LinkedinIcon, ExternalLinkIcon, CloseIcon } from "@/components/ui/icons/Icons";
 
@@ -34,19 +34,19 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-20 md:py-28 px-6 md:px-12 mx-auto scroll-mt-24"
+      className="pt-0 pb-20 md:pb-28 px-6 md:px-12 mx-auto scroll-mt-24"
     >
       <div className="px-0 lg:px-12 max-w-7xl mx-auto">
-        {/* Section Header */}
-        <SectionHeader number="04" title="Education" />
+        {/* Timeline SubHeader */}
+        <TimelineSubHeader title="Education" />
 
         {/* Timeline Container */}
-        <div className="relative max-w-7xl mx-auto mt-16 md:mt-24">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-6 md:left-8 top-4 bottom-4 w-0.5 bg-linear-to-b from-accent/50 via-zinc-800 to-transparent pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto mt-8">
+          {/* Vertical Timeline Line fading out to transparent at the bottom */}
+          <div className="absolute left-6 md:left-8 top-0 bottom-4 w-0.5 bg-linear-to-b from-zinc-800 to-transparent pointer-events-none" />
 
           {/* Timeline Items */}
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-12 md:space-y-16 pb-6">
             {education.map((edu, index) => (
               <motion.div
                 key={edu.institution}
@@ -197,9 +197,9 @@ export default function Education() {
                     {edu.certificateUrl && (
                       <button
                         onClick={() => setSelectedCert(edu)}
-                        className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)]"
+                        className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]"
                       >
-                        <AwardIcon className="w-3.5 h-3.5" />
+                        <GraduationCapIcon className="w-3.5 h-3.5" />
                         View Certificate
                       </button>
                     )}
@@ -211,7 +211,7 @@ export default function Education() {
         </div>
       </div>
 
-      {/* Certification Modal */}
+      {/* Academic Proof Modal */}
       <AnimatePresence>
         {selectedCert && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -282,7 +282,7 @@ export default function Education() {
               <div className="p-4 border-t border-zinc-800 bg-zinc-950/40 flex justify-end">
                 <button
                   onClick={() => setSelectedCert(null)}
-                  className="px-5 py-2 text-xs font-mono text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-850 border border-zinc-850 rounded-lg transition-all"
+                  className="px-5 py-2 text-xs font-mono text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-850 border border-zinc-855 rounded-lg transition-all"
                 >
                   Close
                 </button>

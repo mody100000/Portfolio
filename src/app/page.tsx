@@ -12,10 +12,10 @@ export default function Home() {
       <div className="w-full my-9">
         <Hero />
         <About />
+        <Skills />
         <Experience />
         <Internships />
         <Education />
-        <Skills />
         <GithubContributions />
       </div>
     </main>
