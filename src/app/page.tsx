@@ -1,6 +1,8 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
+import Internships from "@/components/sections/Internships";
+import Education from "@/components/sections/Education";
 import Skills from "@/components/sections/Skills";
 import GithubContributions from "@/components/sections/GithubContributions";
 
@@ -11,6 +13,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Internships />
+        <Education />
         <Skills />
         <GithubContributions />
       </div>
