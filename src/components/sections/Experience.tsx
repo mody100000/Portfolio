@@ -16,19 +16,19 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 md:py-28 px-6 md:px-12 mx-auto scroll-mt-24"
+      className="pt-20 md:pt-28 pb-0 px-6 md:px-12 mx-auto scroll-mt-24"
     >
       <div className="px-0 lg:px-12 max-w-7xl mx-auto">
         {/* Section Header */}
-        <SectionHeader number="02" title="Experience" />
+        <SectionHeader number="03" title="Experience" />
 
         {/* Timeline Container */}
         <div className="relative max-w-7xl mx-auto mt-16 md:mt-24">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-6 md:left-8 top-4 bottom-4 w-0.5 bg-linear-to-b from-accent/50 via-zinc-800 to-transparent pointer-events-none" />
+          {/* Vertical Timeline Line extending to bottom-0 */}
+          <div className="absolute left-6 md:left-8 top-4 bottom-0 w-0.5 bg-linear-to-b from-accent/50 via-zinc-800 to-zinc-800 pointer-events-none" />
 
           {/* Timeline Items */}
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-12 md:space-y-16 pb-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.company}

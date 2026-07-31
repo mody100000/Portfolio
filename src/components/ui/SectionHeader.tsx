@@ -7,8 +7,13 @@ interface SectionHeaderProps {
 }
 
 export default function SectionHeader({ number, title, className = "" }: SectionHeaderProps) {
-  // Ensure the number ends with a dot if it doesn't already
-  const formattedNumber = number.endsWith(".") ? number : `${number}.`;
+  // Ensure the number ends with a dot if it doesn't already, unless it's a dash indicator (like "- /") or empty
+  const formattedNumber =
+    number.startsWith("-") || number.trim() === ""
+      ? number
+      : number.endsWith(".")
+      ? number
+      : `${number}.`;
 
   return (
     <div className={`flex items-center gap-4 mb-12 select-none ${className}`}>
