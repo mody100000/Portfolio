@@ -1,40 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import TimelineSubHeader from "@/components/ui/TimelineSubHeader";
 import { experienceSkillsIcons } from "@/data/experienceSkillsData";
-import {
-  LinkedinIcon,
-  ExternalLinkIcon,
-  CloseIcon,
-} from "@/components/ui/icons/Icons";
-import { InternshipItem, internships } from "@/data/educationData";
+import { AwardIcon, LinkedinIcon } from "@/components/ui/icons/Icons";
+import { internships } from "@/data/educationData";
 
 function getSkillIcon(skillName: string): React.ReactNode | null {
   return experienceSkillsIcons[skillName] || null;
 }
 
-const AwardIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    className={className}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-    />
-  </svg>
-);
-
 export default function Internships() {
-  const [selectedCert, setSelectedCert] = useState<InternshipItem | null>(null);
-
   return (
     <section
       id="internships"
@@ -97,10 +75,6 @@ export default function Internships() {
                       {/* Organization & Location */}
                       <div className="text-base md:text-lg font-body text-zinc-300 font-semibold mt-1">
                         {intern.organization}
-                        <span className="text-zinc-500 font-normal">
-                          {" "}
-                          · Internship
-                        </span>
                       </div>
                     </div>
 
@@ -143,6 +117,12 @@ export default function Internships() {
                         </svg>
                         <span>{intern.location}</span>
                       </div>
+                      {intern.certificateUrl && (
+                        <button className="flex items-center justify-center mt-2 gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]">
+                          <AwardIcon className="w-3.5 h-3.5" />
+                          View Certificate
+                        </button>
+                      )}
                     </div>
                   </div>
 
@@ -196,16 +176,6 @@ export default function Internships() {
                         );
                       })}
                     </div>
-
-                    {intern.certificateUrl && (
-                      <button
-                        onClick={() => setSelectedCert(intern)}
-                        className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]"
-                      >
-                        <AwardIcon className="w-3.5 h-3.5" />
-                        View Certificate
-                      </button>
-                    )}
                   </div>
                 </div>
               </motion.div>
@@ -213,93 +183,6 @@ export default function Internships() {
           </div>
         </div>
       </div>
-
-      {/* Certification Modal */}
-      <AnimatePresence>
-        {selectedCert && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedCert(null)}
-              className="absolute inset-0 bg-black/85 backdrop-blur-md"
-            />
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.93, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.93, y: 15 }}
-              transition={{ type: "spring", duration: 0.4 }}
-              className="relative w-full max-w-3xl bg-surface border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col max-h-[85vh]"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-5 border-b border-zinc-800 bg-zinc-950/40">
-                <div className="flex items-center gap-2.5">
-                  <AwardIcon className="text-accent w-5 h-5" />
-                  <h3 className="text-base md:text-lg font-bold font-display text-white">
-                    {selectedCert.organization} Certification
-                  </h3>
-                </div>
-                <button
-                  onClick={() => setSelectedCert(null)}
-                  className="p-1.5 text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all"
-                  aria-label="Close modal"
-                >
-                  <CloseIcon className="w-4.5 h-4.5" />
-                </button>
-              </div>
-
-              {/* Modal Body */}
-              <div className="p-6 md:p-8 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-zinc-950/20">
-                <div className="w-full relative border border-zinc-800/80 rounded-2xl bg-zinc-900/30 p-8 text-center overflow-hidden shadow-inner flex flex-col items-center justify-center min-h-75 border-dashed">
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-size-[4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
-
-                  <AwardIcon className="w-16 h-16 text-accent/80 mb-5 animate-pulse" />
-                  <h4 className="text-xl md:text-2xl font-bold font-display text-white mb-2">
-                    {selectedCert.role}
-                  </h4>
-                  <p className="text-zinc-400 text-sm md:text-base max-w-md mb-6 leading-relaxed">
-                    This certifies the successful completion of the training
-                    requirements at{" "}
-                    <span className="text-white font-semibold">
-                      {selectedCert.organization}
-                    </span>{" "}
-                    during{" "}
-                    <span className="text-accent font-mono text-sm">
-                      {selectedCert.dates}
-                    </span>
-                    .
-                  </p>
-
-                  <div className="flex flex-wrap items-center justify-center gap-3 w-full">
-                    <a
-                      href={selectedCert.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono font-bold text-accent bg-accent/10 border border-accent/35 hover:bg-accent/20 rounded-xl transition-all duration-300"
-                    >
-                      <ExternalLinkIcon className="w-4 h-4" />
-                      View CV Document (Credential Proof)
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="p-4 border-t border-zinc-800 bg-zinc-950/40 flex justify-end">
-                <button
-                  onClick={() => setSelectedCert(null)}
-                  className="px-5 py-2 text-xs font-mono text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-850 border border-zinc-855 rounded-lg transition-all"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

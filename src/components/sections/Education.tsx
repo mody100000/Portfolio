@@ -1,61 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import TimelineSubHeader from "@/components/ui/TimelineSubHeader";
-import {
-  LinkedinIcon,
-  ExternalLinkIcon,
-  CloseIcon,
-} from "@/components/ui/icons/Icons";
-import { education, EducationItem } from "@/data/educationData";
-
-const GraduationCapIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    className={className}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 14l9-5-9-5-9 5 9 5z"
-    />
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-    />
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"
-    />
-  </svg>
-);
-
-const AwardIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    className={className}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-    />
-  </svg>
-);
+import { GraduationCapIcon, LinkedinIcon } from "@/components/ui/icons/Icons";
+import { education } from "@/data/educationData";
 
 export default function Education() {
-  const [selectedCert, setSelectedCert] = useState<EducationItem | null>(null);
-
   // SVG circular GPA progress circle details
   const gpaValue = 3.54;
   const maxGpa = 4.0;
@@ -273,10 +224,7 @@ export default function Education() {
                     </div>
 
                     {edu.certificateUrl && (
-                      <button
-                        onClick={() => setSelectedCert(edu)}
-                        className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]"
-                      >
+                      <button className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]">
                         <GraduationCapIcon className="w-3.5 h-3.5" />
                         View Certificate
                       </button>
@@ -288,97 +236,6 @@ export default function Education() {
           </div>
         </div>
       </div>
-
-      {/* Academic Proof Modal */}
-      <AnimatePresence>
-        {selectedCert && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedCert(null)}
-              className="absolute inset-0 bg-black/85 backdrop-blur-md"
-            />
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.93, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.93, y: 15 }}
-              transition={{ type: "spring", duration: 0.4 }}
-              className="relative w-full max-w-3xl bg-surface border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col max-h-[85vh]"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-5 border-b border-zinc-800 bg-zinc-950/40">
-                <div className="flex items-center gap-2.5">
-                  <GraduationCapIcon className="text-accent w-5 h-5" />
-                  <h3 className="text-base md:text-lg font-bold font-display text-white">
-                    {selectedCert.institution} Academic Proof
-                  </h3>
-                </div>
-                <button
-                  onClick={() => setSelectedCert(null)}
-                  className="p-1.5 text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all"
-                  aria-label="Close modal"
-                >
-                  <CloseIcon className="w-4.5 h-4.5" />
-                </button>
-              </div>
-
-              {/* Modal Body */}
-              <div className="p-6 md:p-8 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-zinc-950/20">
-                <div className="w-full relative border border-zinc-800/80 rounded-2xl bg-zinc-900/30 p-8 text-center overflow-hidden shadow-inner flex flex-col items-center justify-center min-h-75 border-dashed">
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-size-[4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
-
-                  <GraduationCapIcon className="w-16 h-16 text-accent/80 mb-5 animate-pulse" />
-                  <h4 className="text-xl md:text-2xl font-bold font-display text-white mb-2">
-                    {selectedCert.degree}
-                  </h4>
-                  <p className="text-zinc-400 text-sm md:text-base max-w-md mb-6 leading-relaxed">
-                    This certifies the academic records, courses, and standings
-                    for studies completed at{" "}
-                    <span className="text-white font-semibold">
-                      {selectedCert.institution}
-                    </span>{" "}
-                    during{" "}
-                    <span className="text-accent font-mono text-sm">
-                      {selectedCert.dates}
-                    </span>
-                    , graduating with a GPA of{" "}
-                    <span className="text-white font-bold">
-                      {selectedCert.gpa}
-                    </span>
-                    .
-                  </p>
-
-                  <div className="flex flex-wrap items-center justify-center gap-3 w-full">
-                    <a
-                      href={selectedCert.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono font-bold text-accent bg-accent/10 border border-accent/35 hover:bg-accent/20 rounded-xl transition-all duration-300"
-                    >
-                      <ExternalLinkIcon className="w-4 h-4" />
-                      View CV Document (Credential Proof)
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="p-4 border-t border-zinc-800 bg-zinc-950/40 flex justify-end">
-                <button
-                  onClick={() => setSelectedCert(null)}
-                  className="px-5 py-2 text-xs font-mono text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-850 border border-zinc-855 rounded-lg transition-all"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

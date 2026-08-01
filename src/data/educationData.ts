@@ -61,7 +61,7 @@ export const internships: InternshipItem[] = [
   {
     organization: "Information Technology Institute (ITI)",
     role: "Full-Stack Developer (MERN)",
-    location: "Beni Suef, Egypt",
+    location: "Hybrid – Beni Suef, Egypt",
     dates: "Nov 2023 – Mar 2024",
     logo: "/images/education/iti.jpeg",
     bullets: [
