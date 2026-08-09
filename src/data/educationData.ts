@@ -97,7 +97,7 @@ export const internships: InternshipItem[] = [
       "Learned server-side fundamentals, database management, and cloud deployment procedures.",
     ],
     skills: ["JavaScript", "HTML5", "CSS3", "Git"],
-    certificateUrl: "/certificates/FWD certificate.png",
+    certificateUrl: "/certificates/FWD certificate.jpg",
     links: {
       linkedin: "https://www.linkedin.com/company/egyptfwd/",
     },
