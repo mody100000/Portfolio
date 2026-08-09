@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import TimelineSubHeader from "@/components/ui/TimelineSubHeader";
 import { GraduationCapIcon, LinkedinIcon } from "@/components/ui/icons/Icons";
 import { education } from "@/data/educationData";
+import { div } from "framer-motion/client";
 
 export default function Education() {
   // SVG circular GPA progress circle details
@@ -88,47 +89,6 @@ export default function Education() {
                             )}
                           </div>
                         </div>
-
-                        {/* Dates & Location */}
-                        <div className="flex flex-col md:items-end text-zinc-400 font-mono text-xs md:text-sm shrink-0">
-                          <div className="flex items-center gap-1.5">
-                            <svg
-                              className="w-4 h-4 text-zinc-500"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              />
-                            </svg>
-                            <span>{edu.dates}</span>
-                          </div>
-                          <div className="flex items-center gap-1.5 mt-1.5 md:justify-end text-zinc-500">
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                              />
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                              />
-                            </svg>
-                            <span>{edu.location}</span>
-                          </div>
-                        </div>
                       </div>
 
                       {/* Bullets List */}
@@ -160,7 +120,47 @@ export default function Education() {
                     </div>
 
                     {/* Right/Secondary Column: GPA Circle Gauge */}
-                    {edu.gpa && (
+                    <div>
+                      {/* Dates & Location */}
+                      <div className="flex flex-col items-center text-zinc-400 font-mono text-xs md:text-sm shrink-0 mb-6">
+                        <div className="flex items-center gap-1.5">
+                          <svg
+                            className="w-4 h-4 text-zinc-500"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            />
+                          </svg>
+                          <span>{edu.dates}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 mt-1.5 md:justify-end text-zinc-500">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                          </svg>
+                          <span>{edu.location}</span>
+                        </div>
+                      </div>
                       <div className="w-full lg:w-48 flex flex-row lg:flex-col items-center justify-center gap-4 bg-zinc-900/35 border border-zinc-800/60 rounded-xl p-4 shrink-0 self-stretch lg:self-start">
                         <div className="relative w-24 h-24 flex items-center justify-center shrink-0">
                           <svg className="w-full h-full transform -rotate-90">
@@ -204,7 +204,7 @@ export default function Education() {
                           </span>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
 
                   {/* Coursework pills & Cert Button */}
