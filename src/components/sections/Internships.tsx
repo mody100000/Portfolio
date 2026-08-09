@@ -50,10 +50,10 @@ export default function Internships() {
                 </div>
 
                 {/* Card Content */}
-                <div className="w-full bg-surface/30 hover:bg-surface/50 border border-zinc-800/40 hover:border-accent/20 rounded-2xl p-6 md:p-8 backdrop-blur-xs transition-all duration-300 shadow-xs hover:shadow-[0_10px_30px_-10px_rgba(25,249,216,0.05)]">
+                <div className="w-full relative bg-surface/30 hover:bg-surface/50 border border-zinc-800/40 hover:border-accent/20 rounded-2xl p-6 md:p-8 backdrop-blur-xs transition-all duration-300 shadow-xs hover:shadow-[0_10px_30px_-10px_rgba(25,249,216,0.05)]">
                   {/* Header details */}
-                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
-                    <div>
+                  <div className="flex flex-col md:block mb-4">
+                    <div className="md:pr-64">
                       {/* Role & Links */}
                       <div className="flex flex-wrap items-center gap-3">
                         <h3 className="text-xl md:text-2xl font-bold font-display text-white group-hover:text-accent transition-colors duration-300">
@@ -79,7 +79,7 @@ export default function Internships() {
                     </div>
 
                     {/* Dates & Location */}
-                    <div className="flex flex-col md:items-end text-zinc-400 font-mono text-xs md:text-sm shrink-0">
+                    <div className="flex flex-col static md:absolute md:top-8 md:right-8 md:items-center text-zinc-400 font-mono text-xs md:text-sm shrink-0 mt-4 md:mt-0">
                       <div className="flex items-center gap-1.5">
                         <svg
                           className="w-4 h-4 text-zinc-500"
@@ -117,12 +117,6 @@ export default function Internships() {
                         </svg>
                         <span>{intern.location}</span>
                       </div>
-                      {intern.certificateUrl && (
-                        <button className="flex items-center justify-center mt-2 gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]">
-                          <AwardIcon className="w-3.5 h-3.5" />
-                          View Certificate
-                        </button>
-                      )}
                     </div>
                   </div>
 
@@ -176,6 +170,12 @@ export default function Internships() {
                         );
                       })}
                     </div>
+                    {intern.certificateUrl && (
+                      <button className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]">
+                        <AwardIcon className="w-3.5 h-3.5" />
+                        View Certificate
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>
