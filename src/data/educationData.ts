@@ -50,9 +50,9 @@ export const education: EducationItem[] = [
       "System Analysis & Design",
       "Web Development",
     ],
-    certificateUrl: "/Mahmoud Mohamed Gomaa Software Engineer.pdf",
+    certificateUrl: "/certificates/NCA graduation certificate.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/school/new-cairo-academy/",
+      linkedin: "https://www.linkedin.com/school/new-cairo-academy-nca/",
     },
   },
 ];
@@ -79,7 +79,7 @@ export const internships: InternshipItem[] = [
       "RESTful APIs",
       "Git",
     ],
-    certificateUrl: "/Mahmoud Mohamed Gomaa Software Engineer.pdf",
+    certificateUrl: "/certificates/ITI completion certificate.jpg",
     links: {
       linkedin:
         "https://www.linkedin.com/school/information-technology-institute-iti-/",
@@ -97,9 +97,9 @@ export const internships: InternshipItem[] = [
       "Learned server-side fundamentals, database management, and cloud deployment procedures.",
     ],
     skills: ["JavaScript", "HTML5", "CSS3", "Git"],
-    certificateUrl: "/Mahmoud Mohamed Gomaa Software Engineer.pdf",
+    certificateUrl: "/certificates/FWD certificate.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/company/future-work-is-digital/",
+      linkedin: "https://www.linkedin.com/company/egyptfwd/",
     },
   },
 ];

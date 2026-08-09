@@ -222,13 +222,15 @@ export default function Education() {
                         </span>
                       ))}
                     </div>
-
-                    {edu.certificateUrl && (
-                      <button className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]">
-                        <GraduationCapIcon className="w-3.5 h-3.5" />
-                        View Certificate
-                      </button>
-                    )}
+                    <a
+                      href={edu.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-mono text-accent bg-accent/5 hover:bg-accent/15 border border-accent/25 hover:border-accent/45 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.1)] active:scale-[0.98]"
+                    >
+                      <GraduationCapIcon className="w-3.5 h-3.5" />
+                      View Certificate
+                    </a>
                   </div>
                 </div>
               </motion.div>
