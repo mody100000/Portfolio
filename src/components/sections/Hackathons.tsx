@@ -5,7 +5,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import TimelineSubHeader from "@/components/ui/TimelineSubHeader";
 import { experienceSkillsIcons } from "@/data/experienceSkillsData";
-import { AwardIcon, LinkedinIcon, GithubIcon, ExternalLinkIcon } from "@/components/ui/icons/Icons";
+import {
+  AwardIcon,
+  LinkedinIcon,
+  GithubIcon,
+  ExternalLinkIcon,
+} from "@/components/ui/icons/Icons";
 import { hackathons } from "@/data/hackathonsData";
 
 function getSkillIcon(skillName: string): React.ReactNode | null {
@@ -31,7 +36,7 @@ export default function Hackathons() {
     >
       <div className="px-0 lg:px-12 max-w-7xl mx-auto">
         {/* Timeline SubHeader */}
-        <TimelineSubHeader title="Hackathons & Achievements" />
+        <TimelineSubHeader title="Hackathons" />
 
         {/* Timeline Container */}
         <div className="relative max-w-7xl mx-auto mt-8">
@@ -218,7 +223,7 @@ export default function Hackathons() {
                         );
                       })}
                     </div>
-                    
+
                     <div className="flex items-center gap-3 self-end sm:self-auto">
                       {hack.certificateUrl && (
                         <a
