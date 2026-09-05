@@ -175,3 +175,14 @@ export const AwardIcon = ({ className = "w-5 h-5" }) => (
     />
   </svg>
 );
+
+export const PlayIcon = ({ className = "w-3.5 h-3.5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M8 5v14l11-7z" />
+  </svg>
+);

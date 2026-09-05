@@ -10,23 +10,13 @@ import {
   LinkedinIcon,
   GithubIcon,
   ExternalLinkIcon,
+  PlayIcon,
 } from "@/components/ui/icons/Icons";
 import { hackathons } from "@/data/hackathonsData";
 
 function getSkillIcon(skillName: string): React.ReactNode | null {
   return experienceSkillsIcons[skillName] || null;
 }
-
-const PlayIcon = ({ className = "w-3.5 h-3.5" }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M8 5v14l11-7z" />
-  </svg>
-);
 
 export default function Hackathons() {
   return (
@@ -171,7 +161,6 @@ export default function Hackathons() {
                         </svg>
                         <span>{hack.location}</span>
                       </div>
-
                     </div>
                   </div>
 
