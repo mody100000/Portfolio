@@ -110,6 +110,18 @@ export default function Hackathons() {
                                 <ExternalLinkIcon className="w-4.5 h-4.5" />
                               </a>
                             )}
+                            {hack.videoDemoUrl && (
+                              <a
+                                href={hack.videoDemoUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono text-zinc-300 hover:text-accent bg-zinc-900 hover:bg-zinc-900/90 border border-zinc-800 hover:border-accent/40 rounded-lg transition-all duration-300 hover:scale-105 shadow-md hover:shadow-[0_0_15px_rgba(25,249,216,0.15)] group/link"
+                                title="Watch Demo"
+                              >
+                                <PlayIcon className="w-3.5 h-3.5 text-accent" />
+                                Demo
+                              </a>
+                            )}
                           </div>
                         )}
                       </div>
@@ -159,17 +171,7 @@ export default function Hackathons() {
                         </svg>
                         <span>{hack.location}</span>
                       </div>
-                      {hack.videoDemoUrl && (
-                        <a
-                          href={hack.videoDemoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 mt-3 px-3 py-1.5 text-xs font-mono text-zinc-300 hover:text-accent bg-zinc-900/50 hover:bg-accent/10 border border-zinc-800 hover:border-accent/40 rounded-lg transition-all duration-300 shrink-0 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(25,249,216,0.05)] active:scale-[0.98] w-full md:w-auto"
-                        >
-                          <PlayIcon className="w-3.5 h-3.5 text-accent" />
-                          Watch Demo
-                        </a>
-                      )}
+
                     </div>
                   </div>
 

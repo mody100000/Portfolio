@@ -19,7 +19,7 @@ export const hackathons: HackathonItem[] = [
   {
     title: "NASA Space Apps Challenge",
     role: "Full-Stack Developer",
-    location: "Cairo, Egypt / Hybrid",
+    location: "Cairo, Egypt",
     dates: "Oct 2023",
     logo: "/images/education/space-apps.png",
     bullets: [
@@ -31,6 +31,7 @@ export const hackathons: HackathonItem[] = [
     ],
     skills: [
       "React.js",
+      "Three.js",
       "React Three Fiber",
       "Generative AI",
       "LangChain",
