@@ -25,6 +25,8 @@ export interface InternshipItem {
   certificateUrl?: string;
   links?: {
     linkedin?: string;
+    github?: string;
+    website?: string;
   };
 }
 

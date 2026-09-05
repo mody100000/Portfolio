@@ -9,6 +9,7 @@ export interface ExperienceItem {
   companyDescription?: string;
   bullets: string[];
   skills: string[];
+  videoDemoUrl?: string;
   links?: {
     production?: string;
     linkedin?: string;
@@ -107,6 +108,8 @@ export const experiences: ExperienceItem[] = [
       "Firebase",
       "Figma",
     ],
+    videoDemoUrl:
+      "https://drive.google.com/file/d/1418R0WS2GArnvD7MOLbmgv42wroRtA6F/view?usp=drive_link",
   },
   {
     company: "Galaxy Spies",

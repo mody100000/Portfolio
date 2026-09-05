@@ -6,7 +6,11 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { experiences } from "@/data/experienceData";
 import { experienceSkillsIcons } from "@/data/experienceSkillsData";
-import { LinkedinIcon, ExternalLinkIcon } from "@/components/ui/icons/Icons";
+import {
+  LinkedinIcon,
+  ExternalLinkIcon,
+  PlayIcon,
+} from "@/components/ui/icons/Icons";
 
 function getSkillIcon(skillName: string): React.ReactNode | null {
   return experienceSkillsIcons[skillName] || null;
@@ -59,9 +63,9 @@ export default function Experience() {
                         <h3 className="text-xl md:text-2xl font-bold font-display text-white group-hover:text-accent transition-colors duration-300">
                           {exp.role}
                         </h3>
-                        {exp.links && (
+                        {(exp.links || exp.videoDemoUrl) && (
                           <div className="flex items-center gap-2">
-                            {exp.links.linkedin && (
+                            {exp.links?.linkedin && (
                               <a
                                 href={exp.links.linkedin}
                                 target="_blank"
@@ -72,7 +76,7 @@ export default function Experience() {
                                 <LinkedinIcon className="w-4 h-4" />
                               </a>
                             )}
-                            {exp.links.production && (
+                            {exp.links?.production && (
                               <a
                                 href={exp.links.production}
                                 target="_blank"
@@ -81,6 +85,18 @@ export default function Experience() {
                                 title="Live Website"
                               >
                                 <ExternalLinkIcon className="w-4.5 h-4.5" />
+                              </a>
+                            )}
+                            {exp.videoDemoUrl && (
+                              <a
+                                href={exp.videoDemoUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono text-zinc-300 hover:text-accent bg-zinc-900 hover:bg-zinc-900/90 border border-zinc-800 hover:border-accent/40 rounded-lg transition-all duration-300 hover:scale-105 shadow-md hover:shadow-[0_0_15px_rgba(25,249,216,0.15)] group/link"
+                                title="Watch Demo"
+                              >
+                                <PlayIcon className="w-3.5 h-3.5 text-accent" />
+                                Demo
                               </a>
                             )}
                           </div>

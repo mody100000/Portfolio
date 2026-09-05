@@ -24,6 +24,11 @@ import {
   I18nextIcon,
   AgileIcon,
   FigmaIcon,
+  ThreejsIcon,
+  ExpressIcon,
+  NodeIcon,
+  HTML5Icon,
+  MongoDBIcon,
 } from "@/components/ui/icons/SkillIcons";
 
 export const experienceSkillsIcons: Record<string, React.ReactNode> = {
@@ -40,6 +45,7 @@ export const experienceSkillsIcons: Record<string, React.ReactNode> = {
   Firebase: <FirebaseIcon className="w-4.5 h-4.5" />,
   JavaScript: <JavaScriptIcon className="w-4.5 h-4.5" />,
   CSS3: <CSS3Icon className="w-4.5 h-4.5" />,
+  HTML5: <HTML5Icon className="w-4.5 h-4.5" />,
   "RESTful APIs": <RestApiIcon className="w-4.5 h-4.5" />,
   "Apollo Client": <GraphQLIcon className="w-4.5 h-4.5" />,
   "shadcn/ui": <ShadcnIcon className="w-4.5 h-4.5" />,
@@ -52,4 +58,8 @@ export const experienceSkillsIcons: Record<string, React.ReactNode> = {
   Agile: <AgileIcon className="w-4.5 h-4.5" />,
   Figma: <FigmaIcon className="w-4.5 h-4.5" />,
   Azure: <AzureIcon className="w-4.5 h-4.5" />,
+  "Three.js": <ThreejsIcon className="w-4.5 h-4.5" />,
+  "Express.js": <ExpressIcon className="w-4.5 h-4.5" />,
+  "Node.js": <NodeIcon className="w-4.5 h-4.5" />,
+  MongoDB: <MongoDBIcon className="w-4.5 h-4.5" />,
 };
