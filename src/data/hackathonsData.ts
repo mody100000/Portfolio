@@ -40,11 +40,12 @@ export const hackathons: HackathonItem[] = [
       "ChatGPT",
       "RAG",
     ],
-    certificateUrl: "/certificates/nasa-space-apps-nomination.pdf",
-    videoDemoUrl: "https://www.youtube.com/watch?v=example-demo", // Template link for the video demo
+    certificateUrl: "/certificates/nasa-space-apps.pdf",
+    videoDemoUrl:
+      "https://drive.google.com/file/d/1ebv4sDtbrrAP7pzEj27xLnwUEtkS8baV/view",
     links: {
       website: "https://www.spaceappschallenge.org/",
-      // github: "https://github.com/your-username/exo-plore" // Add project repo here
+      github: "https://github.com/mody100000/Exo-plore",
     },
   },
 ];
