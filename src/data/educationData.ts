@@ -98,7 +98,15 @@ export const internships: InternshipItem[] = [
       "Developed multiple frontend and integration projects using advanced JavaScript (ES6+), semantic HTML, and responsive CSS styling.",
       "Learned server-side fundamentals, database management, and cloud deployment procedures.",
     ],
-    skills: ["JavaScript", "HTML5", "CSS3", "Git"],
+    skills: [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Git",
+    ],
     certificateUrl: "/certificates/FWD certificate.jpg",
     links: {
       linkedin: "https://www.linkedin.com/company/egyptfwd/",
